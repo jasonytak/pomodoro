@@ -15,7 +15,7 @@ class App extends React.Component {
   }
 
   render() {
-    return <div>Goodbye</div>;
+    return <div>Hello</div>;
   }
 }
 

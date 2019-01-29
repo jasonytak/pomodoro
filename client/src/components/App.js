@@ -1,4 +1,6 @@
 import React from 'react';
+import LoginPage from './LoginPage';
+import axios from 'axios';
 
 class App extends React.Component {
 
@@ -14,8 +16,12 @@ class App extends React.Component {
     return body;
   }
 
+  onSubmit = (user) => {
+    axios.post('/user', { user });
+  }
+
   render() {
-    return <div>Hello</div>;
+    return <div><LoginPage onSubmit={this.onSubmit} /></div>;
   }
 }
 

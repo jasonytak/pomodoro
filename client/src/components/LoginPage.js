@@ -4,13 +4,18 @@ import React from 'react';
 class LoginPage extends React.Component {
   state = { name: '' };
 
+  onFormSubmit = (event) => {
+    event.preventDefault();
+    this.props.onSubmit(this.state.term);
+  }
+
   render() {
     return (
       <div className="login-container">
         <div className="ui one column stackable center aligned page grid">
           <h1 className="ui header">PAY ATTENTION</h1>
           <div className="column twelve wide">
-            <form className="ui segment form">
+            <form onSubmit={this.onFormSubmit} className="ui segment form">
               <div className="field">
                 <label>Name</label>
                 <input

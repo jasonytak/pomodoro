@@ -1,6 +1,8 @@
 import React from 'react';
 import LoginPage from './LoginPage';
+import HomePage from './HomePage';
 import axios from 'axios';
+import { Route, withRouter } from 'react-router-dom';
 
 class App extends React.Component {
   state = { users: [] };
@@ -16,21 +18,29 @@ class App extends React.Component {
   // };
 
   onSubmit = user => {
-    axios.post('/user', { user }).then(res =>
-      this.setState(state => {
-        const users = this.state.users.concat(res.data.user);
-        return { users };
-      })
-    );
+    axios
+      .post('/user', { user })
+      .then(res =>
+        this.setState(state => {
+          const users = this.state.users.concat(res.data.user);
+          return { users };
+        })
+      )
+      .then(() => this.props.history.push('/home'));
   };
 
   render() {
     return (
       <div>
-        <LoginPage onSubmit={this.onSubmit} />
+        <Route
+          exact
+          path="/"
+          render={props => <LoginPage {...props} onSubmit={this.onSubmit} />}
+        />
+        <Route path="/home" render={props => <HomePage {...props} users={this.state.users} />} />
       </div>
     );
   }
 }
 
-export default App;
+export default withRouter(App);

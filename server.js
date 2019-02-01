@@ -15,6 +15,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.post('/user', userController.saveAndFind);
 
+app.get('/time', (req, res) => {
+  const dateTime = new Date();
+  res.send(dateTime);
+});
+
 app.listen(port, () => console.log(`Listening on port ${port}`));
 
 app.get('/server', (req, res) => {

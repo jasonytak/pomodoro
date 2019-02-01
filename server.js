@@ -13,7 +13,7 @@ mongoose.connect(mongoDB).then(() => console.log('CONNECTED'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.post('/user', userController.saveUser);
+app.post('/user', userController.saveAndFind);
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
 

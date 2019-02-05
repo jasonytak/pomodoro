@@ -14,9 +14,8 @@ import CountdownClock from './CountdownClock';
 // }
 
 const HomePage = props => {
-  const users = props.users.map(({user}) => {
-    console.log(user);
-    return <UserCard user={user} />;
+  const users = props.users.map(({user, _id}) => {
+    return <UserCard user={user} key={_id} />;
   });
   return (
     <div>

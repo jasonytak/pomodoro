@@ -16,8 +16,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.post('/user', userController.saveAndFind);
 
 app.get('/time', (req, res) => {
-  const dateTime = new Date();
-  res.send(dateTime);
+  res.locals.seconds = new Date().getMinutes() * 60;
+  res.send(res.locals);
 });
 
 app.listen(port, () => console.log(`Listening on port ${port}`));

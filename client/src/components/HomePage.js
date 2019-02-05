@@ -2,17 +2,6 @@ import React from 'react';
 import UserCard from './UserCard';
 import CountdownClock from './CountdownClock';
 
-// class HomePage extends React.Component {
-
-//   render() {
-//     return (
-//       <div>
-//         <div>Hello</div>
-//       </div>
-//     );
-//   }
-// }
-
 const HomePage = props => {
   const users = props.users.map(({user, _id}) => {
     return <UserCard user={user} key={_id} />;

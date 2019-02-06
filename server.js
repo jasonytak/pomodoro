@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.post('/user', userController.saveAndFind);
 
 app.get('/time', (req, res) => {
-  res.locals.seconds = new Date().getMinutes() * 60;
+  res.locals.seconds = new Date().getMinutes() * 60 + new Date().getSeconds();
   res.send(res.locals);
 });
 

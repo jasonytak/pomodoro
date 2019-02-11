@@ -11,16 +11,9 @@ const mongoDB = 'mongodb://test:test123@ds145563.mlab.com:45563/pomodoro';
 
 mongoose.connect(mongoDB).then(() => console.log('CONNECTED'));
 
-// app.get('*', (req, res) => {
-//   res.sendFile(path.join(__dirname, 'client/build/index.html'));
-// });
-
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('client/build'));
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-  });
-}
+app.get('/', (req, res) => {
+  res.send('ROOT ROUTE');
+});
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));

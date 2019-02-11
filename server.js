@@ -11,8 +11,8 @@ const mongoDB = 'mongodb://test:test123@ds145563.mlab.com:45563/pomodoro';
 
 mongoose.connect(mongoDB).then(() => console.log('CONNECTED'));
 
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client/build'));
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'client/build/index.html'));
 });
 
 // app.use(express.static(path.join(__dirname, 'client/build')));

@@ -1,7 +1,7 @@
 {
   "scrips": {
     "start": "node server.js",
-    "heroku-postbuild": "yarn run build"
+    "heroku-postbuild": "cd client && yarn install && yarn run build"
   },
   "dependencies": {
     "body-parser": "^1.18.3",

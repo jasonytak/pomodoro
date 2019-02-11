@@ -22,11 +22,12 @@ class App extends React.Component {
       .post('/user', { user })
       .then(res =>
         this.setState(state => {
-          const users = this.state.users.concat(res.data.user);
+          const users = this.state.users.concat(res.data);
           return { users };
         })
       )
-      .then(() => this.props.history.push('/home'));
+      .then(() => this.props.history.push('/home'))
+      .catch(error => console.log(error.response));
   };
 
   render() {
@@ -37,7 +38,10 @@ class App extends React.Component {
           path="/"
           render={props => <LoginPage {...props} onSubmit={this.onSubmit} />}
         />
-        <Route path="/home" render={props => <HomePage {...props} users={this.state.users} />} />
+        <Route
+          path="/home"
+          render={props => <HomePage {...props} users={this.state.users} />}
+        />
       </div>
     );
   }

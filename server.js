@@ -20,9 +20,9 @@ if (process.env.NODE_env === 'production') {
   });
 }
 
-app.get('/', (req, res) => {
-  res.send('ROOT ROUTE');
-});
+// app.get('/', (req, res) => {
+//   res.send('ROOT ROUTE');
+// });
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));

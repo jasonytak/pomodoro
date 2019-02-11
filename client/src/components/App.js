@@ -6,16 +6,16 @@ import { Route, withRouter } from 'react-router-dom';
 
 class App extends React.Component {
   state = { users: [] };
-  componentDidMount() {
-    this.callExpress();
-  }
+  // componentDidMount() {
+  //   this.callExpress();
+  // }
 
-  callExpress = async () => {
-    const response = await fetch('/server');
-    const body = await response.json();
-    console.log(body);
-    return body;
-  };
+  // callExpress = async () => {
+  //   const response = await fetch('/server');
+  //   const body = await response.json();
+  //   console.log(body);
+  //   return body;
+  // };
 
   onSubmit = user => {
     axios

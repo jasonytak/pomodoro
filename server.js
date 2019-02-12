@@ -13,16 +13,12 @@ mongoose.connect(mongoDB).then(() => console.log('CONNECTED'));
 
 app.use(express.static(path.join(__dirname, 'client/build')));
 
-if (process.env.NODE_env === 'production') {
+if (process.env.NODE === 'production') {
   app.use(express.static(path.join(__dirname, 'client/build')));
   app.get('*', (req, res) => {
-    res.sendFile(path.join((__dirname = 'client/build/index.html')));
+    res.sendFile(path.join((__dirname, 'client', 'build', 'index.html'));
   });
 }
-
-// app.get('/', (req, res) => {
-//   res.send('ROOT ROUTE');
-// });
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));

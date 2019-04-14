@@ -1,0 +1,56 @@
+.pomodoro-app {
+  background-color: #C55E5E;
+  min-height: 100vh;
+}
+
+.pomodoro-menu h1, .ui.button {
+  font-family: 'Amatic SC', cursive;
+}
+
+.pomodoro-menu {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 1%;
+}
+
+.pomodoro-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.pomodoro-display img {
+  width: 15%;
+  height: 5%;
+}
+
+.pomodoro-menu h1 {
+  font-size: 5vw;
+}
+
+.pomodoro-menu-buttons .ui.button {
+  margin: 10px;
+  font-size: calc(12px + 1vw);
+}
+
+.timer-display {
+  margin-top: 2%;
+}
+
+.pomodoro-buttons {
+  margin-top: 2%;
+  display: flex;
+  justify-content: center;
+}
+
+.pomodoro-instructions {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.pomodoro-instructions ol {
+  padding: 0;
+}

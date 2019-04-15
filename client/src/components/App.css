@@ -46,11 +46,12 @@
 }
 
 .pomodoro-instructions {
-  display: flex;
+  margin-top: 3%;
   justify-content: center;
   text-align: center;
 }
 
 .pomodoro-instructions ol {
   padding: 0;
+  color: white;
 }

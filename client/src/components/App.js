@@ -4,15 +4,20 @@ import PomodoroDisplay from './PomodoroDisplay';
 import PomodoroButtons from './PomodoroButtons';
 import PomodoroInstructions from './PomodoroInstructions';
 import InputModal from './InputModal';
+import AboutModal from './AboutModal';
 
 class App extends React.Component {
   state = {
-    totalSeconds: null,
-    totalWorkMinutes: 1,
-    totalBreakMinutes: 2,
+    totalSeconds: 1500,
+    totalWorkMinutes: 25,
+    totalBreakMinutes: 5,
     isRunning: false,
     currentState: 'work'
   };
+
+  // TODO: Finish styling
+  // TODO: "What is this" module
+  // TODO: Change background when classname changes
 
   onStart = () => {
     this.setState({
@@ -60,7 +65,7 @@ class App extends React.Component {
     return (
       <div className="pomodoro-app">
         <div className="pomodoro-menu">
-          <h1>Pomodoro Timer</h1>
+          <h1>POMODORO TIMER</h1>
           <div className="pomodoro-menu-buttons">
             <InputModal
               onInputChange={this.onInputChange}
@@ -68,9 +73,7 @@ class App extends React.Component {
               totalWorkMinutes={this.state.totalWorkMinutes}
               totalBreakMinutes={this.state.totalBreakMinutes}
             />
-            <button className="ui button">
-              <span>What is this?</span>
-            </button>
+            <AboutModal />
           </div>
         </div>
         <PomodoroDisplay totalSeconds={this.state.totalSeconds} />

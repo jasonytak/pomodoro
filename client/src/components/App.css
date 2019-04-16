@@ -4,7 +4,7 @@
 }
 
 .pomodoro-menu h1, .ui.button {
-  font-family: 'Amatic SC', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .pomodoro-menu {
@@ -14,11 +14,18 @@
   padding: 1%;
 }
 
+.pomodoro-menu h1 {
+  color: #EEBE97;
+  font-weight: light;
+  font-style: italic;
+}
+
 .pomodoro-display {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: 5%;
 }
 
 .pomodoro-display img {
@@ -37,6 +44,9 @@
 
 .timer-display {
   margin-top: 2%;
+  color: #EEBE97;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 50px;
 }
 
 .pomodoro-buttons {
@@ -53,5 +63,18 @@
 
 .pomodoro-instructions ol {
   padding: 0;
-  color: white;
+  color: #EEBE97;
+}
+
+.ui.input-modal > .header,
+.ui.input-modal > .content,
+.ui.input-modal > .actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pomodoro-menu-buttons .ui.button {
+  background-color: #EEBE97;
+  color: #C55E5E;
 }

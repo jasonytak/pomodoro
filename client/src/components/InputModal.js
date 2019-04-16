@@ -17,23 +17,31 @@ class InputModal extends React.Component {
   render() {
     return (
       <Modal
-        trigger={<Button onClick={this.handleOpen}>Customize Timers</Button>}
+        trigger={
+          <Button onClick={this.handleOpen}>
+            CUSTOMIZE TIMERS
+          </Button>
+        }
         open={this.state.modalOpen}
         onClose={this.handleClose}
+        size="tiny"
+        className="input-modal"
       >
         <Modal.Header>Customize Timers</Modal.Header>
         <Modal.Content>
+          <label>Work Minutes: </label>
           <Input
             name="totalWorkMinutes"
             onChange={this.props.onInputChange}
-            placeholder="Enter Work Minutes..."
+            placeholder="Enter Minutes..."
             onKeyPress={e => allowNumbersOnly(e)}
             value={this.props.totalWorkMinutes}
           />
+          <label>Break Minutes: </label>
           <Input
             name="totalBreakMinutes"
             onChange={this.props.onInputChange}
-            placeholder="Enter Break Minutes..."
+            placeholder="Enter Minutes..."
             onKeyPress={e => allowNumbersOnly(e)}
             value={this.props.totalBreakMinutes}
           />

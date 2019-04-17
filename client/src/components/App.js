@@ -15,10 +15,6 @@ class App extends React.Component {
     currentState: 'work'
   };
 
-  // TODO: Finish styling
-  // TODO: "What is this" module
-  // TODO: Change background when classname changes
-
   onStart = () => {
     this.setState({
       totalSeconds: this.state.totalWorkMinutes * 60,

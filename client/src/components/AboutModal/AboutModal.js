@@ -1,3 +1,4 @@
+import './AboutModal.css';
 import React from 'react';
 import { Button, Modal } from 'semantic-ui-react';
 

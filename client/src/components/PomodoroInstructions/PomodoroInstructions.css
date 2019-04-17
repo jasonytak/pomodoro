@@ -1,0 +1,11 @@
+.pomodoro-instructions {
+  margin-top: 1%;
+  justify-content: center;
+  text-align: center;
+}
+
+.pomodoro-instructions ol {
+  padding: 0;
+  color: #eebe97;
+  font-family: 'Source Sans Pro', sans-serif;
+}

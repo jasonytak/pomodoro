@@ -1,9 +1,12 @@
 .pomodoro-app {
-  background-color: #C55E5E;
+  background-color: #c55e5e;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.pomodoro-menu h1, .ui.button {
+.pomodoro-menu h1,
+.ui.button {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
@@ -15,22 +18,9 @@
 }
 
 .pomodoro-menu h1 {
-  color: #EEBE97;
+  color: #eebe97;
   font-weight: light;
   font-style: italic;
-}
-
-.pomodoro-display {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 5%;
-}
-
-.pomodoro-display img {
-  width: 15%;
-  height: 5%;
 }
 
 .pomodoro-menu h1 {
@@ -42,39 +32,7 @@
   font-size: calc(12px + 1vw);
 }
 
-.timer-display {
-  margin-top: 2%;
-  color: #EEBE97;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 50px;
-}
-
-.pomodoro-buttons {
-  margin-top: 2%;
-  display: flex;
-  justify-content: center;
-}
-
-.pomodoro-instructions {
-  margin-top: 3%;
-  justify-content: center;
-  text-align: center;
-}
-
-.pomodoro-instructions ol {
-  padding: 0;
-  color: #EEBE97;
-}
-
-.ui.input-modal > .header,
-.ui.input-modal > .content,
-.ui.input-modal > .actions {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .pomodoro-menu-buttons .ui.button {
-  background-color: #EEBE97;
-  color: #C55E5E;
+  background-color: #eebe97;
+  color: #c55e5e;
 }

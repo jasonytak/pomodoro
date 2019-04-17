@@ -1,10 +1,10 @@
 import './App.css';
 import React from 'react';
-import PomodoroDisplay from './PomodoroDisplay';
-import PomodoroButtons from './PomodoroButtons';
-import PomodoroInstructions from './PomodoroInstructions';
-import InputModal from './InputModal';
-import AboutModal from './AboutModal';
+import PomodoroDisplay from './PomodoroDisplay/PomodoroDisplay';
+import PomodoroButtons from './PomodoroButtons/PomodoroButtons';
+import PomodoroInstructions from './PomodoroInstructions/PomodoroInstructions';
+import InputModal from './InputModal/InputModal';
+import AboutModal from './AboutModal/AboutModal';
 
 class App extends React.Component {
   state = {
@@ -60,6 +60,10 @@ class App extends React.Component {
   onInputChange = e => {
     this.setState({ [e.target.name]: e.target.value });
   };
+
+  handleSubmit = () => {
+    this.setState({ totalSeconds: this.state.totalWorkMinutes * 60 });
+  }
 
   render() {
     return (

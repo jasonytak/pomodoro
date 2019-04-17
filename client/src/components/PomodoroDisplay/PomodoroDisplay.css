@@ -1,0 +1,27 @@
+.pomodoro-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 5%;
+}
+
+.pomodoro-display img {
+  width: 15%;
+  height: 5%;
+}
+
+.timer-display {
+  margin-top: 1%;
+  color: #eebe97;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 20px;
+}
+
+.ui.tiny.statistic > .value {
+  color: #eebe97;
+}
+
+.ui.tiny.statistic > .label {
+  color: #eebe97;
+}

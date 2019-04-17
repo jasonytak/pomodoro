@@ -1,5 +1,6 @@
+import './PomodoroDisplay.css';
 import React from 'react';
-import TomatoImage from '../images/cartoon-tomato.png';
+import TomatoImage from '../../images/cartoon-tomato.png';
 
 const PomodoroDisplay = ({ totalSeconds }) => {
   return (
@@ -17,7 +18,22 @@ const formatTimer = totalSeconds => {
   seconds = seconds.toString().length === 1 ? '0' + seconds : seconds;
   return (
     <>
-      Time left: {minutes} : {seconds}
+      <div className="ui tiny statistic">
+        <div className="value">
+          {minutes}
+        </div>
+        <div className="label">
+          MINUTES
+        </div>
+      </div>
+      <div className="ui tiny statistic">
+        <div className="value">
+          {seconds}
+        </div>
+        <div className="label">
+          SECONDS
+        </div>
+      </div>
     </>
   );
 };

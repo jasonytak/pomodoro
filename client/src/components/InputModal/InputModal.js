@@ -1,3 +1,4 @@
+import './InputModal.css';
 import React from 'react';
 import { Button, Modal, Input } from 'semantic-ui-react';
 
@@ -11,6 +12,7 @@ class InputModal extends React.Component {
   };
 
   handleClose = () => {
+    this.props.handleSubmit();
     this.setState({ modalOpen: false });
   };
 

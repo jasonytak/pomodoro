@@ -22,11 +22,6 @@
   background-color: #c55e5e;
 }
 
-/* .ui.input-modal > .content,
-.ui.input-modal > .actions {
+.ui.input > input:focus {
   background-color: #c55e5e;
 }
-
-.ui.input-modal > .content input {
-  background-color: #c55e5e;
-} */

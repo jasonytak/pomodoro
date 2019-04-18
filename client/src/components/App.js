@@ -5,7 +5,6 @@ import PomodoroButtons from './PomodoroButtons/PomodoroButtons';
 import PomodoroInstructions from './PomodoroInstructions/PomodoroInstructions';
 import InputModal from './InputModal/InputModal';
 import AboutModal from './AboutModal/AboutModal';
-import TomatoImage from '../images/cartoon-tomato.png';
 
 class App extends React.Component {
   state = {

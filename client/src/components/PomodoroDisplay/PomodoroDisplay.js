@@ -1,6 +1,5 @@
 import './PomodoroDisplay.css';
 import React from 'react';
-import TomatoImage from '../../images/cartoon-tomato.png';
 
 const PomodoroDisplay = ({ totalSeconds }) => {
   return (

@@ -5,6 +5,7 @@ import PomodoroButtons from './PomodoroButtons/PomodoroButtons';
 import PomodoroInstructions from './PomodoroInstructions/PomodoroInstructions';
 import InputModal from './InputModal/InputModal';
 import AboutModal from './AboutModal/AboutModal';
+import TomatoImage from '../images/cartoon-tomato.png';
 
 class App extends React.Component {
   state = {
@@ -59,7 +60,7 @@ class App extends React.Component {
 
   handleSubmit = () => {
     this.setState({ totalSeconds: this.state.totalWorkMinutes * 60 });
-  }
+  };
 
   render() {
     return (
@@ -83,7 +84,10 @@ class App extends React.Component {
           onPause={this.onPause}
           isRunning={this.state.isRunning}
         />
-        <PomodoroInstructions />
+        <PomodoroInstructions
+          totalWorkMinutes={this.state.totalWorkMinutes}
+          totalBreakMinutes={this.state.totalBreakMinutes}
+        />
       </div>
     );
   }

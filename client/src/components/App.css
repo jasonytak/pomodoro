@@ -21,10 +21,7 @@
   color: #eebe97;
   font-weight: light;
   font-style: italic;
-}
-
-.pomodoro-menu h1 {
-  font-size: 5vw;
+  font-size: 50px;
 }
 
 .pomodoro-menu-buttons .ui.button {

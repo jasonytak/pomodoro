@@ -5,7 +5,6 @@ import TomatoImage from '../../images/cartoon-tomato.png';
 const PomodoroDisplay = ({ totalSeconds }) => {
   return (
     <div className="pomodoro-display">
-      <img src={TomatoImage} alt="pomodoro" />
       <div className="timer-display">{formatTimer(totalSeconds)}</div>
     </div>
   );

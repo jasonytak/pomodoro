@@ -3,6 +3,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  padding: 1%;
 }
 
 .pomodoro-menu h1,
@@ -14,12 +15,10 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
-  padding: 1%;
 }
 
 .pomodoro-menu h1 {
   color: #eebe97;
-  font-weight: light;
   font-style: italic;
   font-size: 50px;
 }
@@ -27,9 +26,10 @@
 .pomodoro-menu-buttons .ui.button {
   margin: 10px;
   font-size: calc(12px + 1vw);
-}
-
-.pomodoro-menu-buttons .ui.button {
   background-color: #eebe97;
   color: #c55e5e;
+}
+
+.pomodoro-menu-buttons .ui.button:hover {
+  background-color: black;
 }

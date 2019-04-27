@@ -1,12 +1,12 @@
 .pomodoro-instructions {
   margin-top: 5%;
-  justify-content: center;
   text-align: center;
+  margin-right: 5%;
 }
 
-.pomodoro-instructions ol {
-  padding: 0;
+.pomodoro-instructions li {
   color: #eebe97;
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 15px;
+  font-size: calc(15px + 0.5vw);
+  list-style-type: none;
 }

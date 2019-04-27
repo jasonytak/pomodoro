@@ -36,7 +36,7 @@ class AboutModal extends React.Component {
             the work period is 25 minutes followed by 5 minutes of break time.
           </p>
           <p>
-            Each interval is known as a pomdoro, derived from the Italian word
+            Each interval is known as a pomodoro, derived from the Italian word
             for "tomato", after the tomato-shaped timer that Cirillo used.
           </p>
         </Modal.Content>

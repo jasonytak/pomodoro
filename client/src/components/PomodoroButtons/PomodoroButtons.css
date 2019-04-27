@@ -1,6 +1,6 @@
 .pomodoro-buttons {
-  margin-left: 22px;
-  display: flex;
+  margin-left: 2%;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
 }

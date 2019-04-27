@@ -1,11 +1,10 @@
 .pomodoro-display {
-  display: flex;
-  justify-content: center;
+  display: inline-flex;
   align-items: center;
   flex-direction: column;
-  margin: 10% 0 5% 2%;
   margin-top: 10%;
   margin-bottom: 5%;
+  margin-left: 2%;
 }
 
 .timer-display {
@@ -16,11 +15,10 @@
 
 .ui.tiny.statistic > .value {
   color: #eebe97;
-  font-size: 60px !important;
+  font-size:  calc(70px + 5vw) !important;
 }
 
 .ui.tiny.statistic > .label {
   color: #eebe97;
-  font-size: 30px;
-  margin-top: 10%;
+  font-size: calc(30px + 1vw);
 }

@@ -18,11 +18,7 @@ class AboutModal extends React.Component {
   render() {
     return (
       <Modal
-        trigger={
-          <Button onClick={this.handleOpen}>
-            WHAT IS THIS?
-          </Button>
-        }
+        trigger={<Button onClick={this.handleOpen}>WHAT IS THIS?</Button>}
         open={this.state.modalOpen}
         onClose={this.handleClose}
         size="small"

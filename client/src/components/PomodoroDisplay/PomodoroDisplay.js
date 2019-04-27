@@ -17,20 +17,12 @@ const formatTimer = totalSeconds => {
   return (
     <>
       <div className="ui tiny statistic">
-        <div className="value">
-          {minutes}
-        </div>
-        <div className="label">
-          MINUTES
-        </div>
+        <div className="value">{minutes}</div>
+        <div className="label">MINUTES</div>
       </div>
       <div className="ui tiny statistic">
-        <div className="value">
-          {seconds}
-        </div>
-        <div className="label">
-          SECONDS
-        </div>
+        <div className="value">{seconds}</div>
+        <div className="label">SECONDS</div>
       </div>
     </>
   );

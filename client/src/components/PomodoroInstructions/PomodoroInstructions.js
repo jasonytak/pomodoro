@@ -4,13 +4,14 @@ import React from 'react';
 const PomodoroInstructions = ({ totalWorkMinutes, totalBreakMinutes }) => {
   return (
     <div className="pomodoro-instructions">
-      <ul>
-        <li>1. DECIDE ON A TASK</li>
-        <li>2. START THE POMODORO TIMER</li>
-        <li>3. WORK ON THE TASK FOR {totalWorkMinutes} MINUTES</li>
-        <li>4. WHEN TIMER RINGS, PAUSE WORK AND TAKE A {totalBreakMinutes} MINUTE BREAK</li>
-        <li>5. REPEAT!</li>
-      </ul>
+      <p>1. DECIDE ON A TASK</p>
+      <p>2. START THE POMODORO TIMER</p>
+      <p>3. WORK ON THE TASK FOR {totalWorkMinutes} MINUTES</p>
+      <p>
+        4. WHEN TIMER RINGS, PAUSE WORK AND TAKE A {totalBreakMinutes} MINUTE
+        BREAK
+      </p>
+      <p>5. REPEAT!</p>
     </div>
   );
 };

@@ -19,11 +19,7 @@ class InputModal extends React.Component {
   render() {
     return (
       <Modal
-        trigger={
-          <Button onClick={this.handleOpen}>
-            CUSTOMIZE TIMERS
-          </Button>
-        }
+        trigger={<Button onClick={this.handleOpen}>CUSTOMIZE TIMERS</Button>}
         open={this.state.modalOpen}
         onClose={this.handleClose}
         size="tiny"

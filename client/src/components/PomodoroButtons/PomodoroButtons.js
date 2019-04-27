@@ -5,14 +5,14 @@ const PomodoroButtons = ({ onStart, onPause, onReset, isRunning }) => {
   if (!isRunning) {
     return (
       <div className="pomodoro-buttons">
-          <button className="ui labeled icon play button" onClick={onStart}>
-            <i className="play icon" />
-            PLAY
-          </button>
-          <button className="ui labeled icon restart button" onClick={onReset}>
-            <i className="redo icon" />
-            RESET
-          </button>
+        <button className="ui labeled icon play button" onClick={onStart}>
+          <i className="play icon" />
+          PLAY
+        </button>
+        <button className="ui labeled icon restart button" onClick={onReset}>
+          <i className="redo icon" />
+          RESET
+        </button>
       </div>
     );
   }

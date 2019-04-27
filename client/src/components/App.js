@@ -1,4 +1,5 @@
 import './App.css';
+import Bell from '../sounds/Bell.wav';
 import React from 'react';
 import PomodoroDisplay from './PomodoroDisplay/PomodoroDisplay';
 import PomodoroButtons from './PomodoroButtons/PomodoroButtons';
@@ -14,6 +15,10 @@ class App extends React.Component {
     isRunning: false,
     currentState: 'work'
   };
+
+  playBell = () => {
+    this.refs.audio.play();
+  }
 
   onStart = () => {
     this.setState({
@@ -34,6 +39,7 @@ class App extends React.Component {
 
   tick = () => {
     if (this.state.totalSeconds === 0) {
+      this.playBell();
       this.switchTimer();
     }
     this.setState({ totalSeconds: this.state.totalSeconds - 1 });
@@ -75,18 +81,21 @@ class App extends React.Component {
             />
             <AboutModal />
           </div>
+          <audio ref="audio">
+            <source src={Bell} />>
+          </audio>
         </div>
-        <PomodoroDisplay totalSeconds={this.state.totalSeconds} />
-        <PomodoroButtons
-          onStart={this.onStart}
-          onReset={this.onReset}
-          onPause={this.onPause}
-          isRunning={this.state.isRunning}
-        />
-        <PomodoroInstructions
-          totalWorkMinutes={this.state.totalWorkMinutes}
-          totalBreakMinutes={this.state.totalBreakMinutes}
-        />
+          <PomodoroDisplay totalSeconds={this.state.totalSeconds} />
+          <PomodoroButtons
+            onStart={this.onStart}
+            onReset={this.onReset}
+            onPause={this.onPause}
+            isRunning={this.state.isRunning}
+          />
+          <PomodoroInstructions
+            totalWorkMinutes={this.state.totalWorkMinutes}
+            totalBreakMinutes={this.state.totalBreakMinutes}
+          />
       </div>
     );
   }

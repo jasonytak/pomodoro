@@ -1,9 +1,10 @@
 import './PomodoroDisplay.css';
 import React from 'react';
 
-const PomodoroDisplay = ({ totalSeconds }) => {
+const PomodoroDisplay = ({ totalSeconds, currentState }) => {
   return (
     <div className="pomodoro-display">
+      <h2>{currentState} Time</h2>
       <div className="timer-display">{formatTimer(totalSeconds)}</div>
     </div>
   );

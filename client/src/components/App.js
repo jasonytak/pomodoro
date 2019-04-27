@@ -13,7 +13,7 @@ class App extends React.Component {
     totalWorkMinutes: 25,
     totalBreakMinutes: 5,
     isRunning: false,
-    currentState: 'work'
+    currentState: 'Work'
   };
 
   playBell = () => {
@@ -46,15 +46,15 @@ class App extends React.Component {
   };
 
   switchTimer = () => {
-    if (this.state.currentState === 'work') {
+    if (this.state.currentState === 'Work') {
       this.setState({
         totalSeconds: this.state.totalBreakMinutes * 60,
-        currentState: 'break'
+        currentState: 'Break'
       });
-    } else if (this.state.currentState === 'break') {
+    } else if (this.state.currentState === 'Break') {
       this.setState({
         totalSeconds: this.state.totalWorkMinutes * 60,
-        currentState: 'work'
+        currentState: 'Work'
       });
     }
   };
@@ -85,7 +85,7 @@ class App extends React.Component {
             <source src={Bell} />>
           </audio>
         </div>
-          <PomodoroDisplay totalSeconds={this.state.totalSeconds} />
+          <PomodoroDisplay totalSeconds={this.state.totalSeconds} currentState={this.state.currentState} />
           <PomodoroButtons
             onStart={this.onStart}
             onReset={this.onReset}

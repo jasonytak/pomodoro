@@ -5,12 +5,16 @@
   margin-top: 10%;
   margin-bottom: 5%;
   margin-left: 2%;
+  color: #eebe97;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.pomodoro-display h2{
+  font-size: calc(20px + 1vw);
 }
 
 .timer-display {
   margin-top: 1%;
-  color: #eebe97;
-  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .ui.tiny.statistic > .value {
